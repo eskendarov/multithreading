@@ -2,7 +2,10 @@ package ru.eskendarov.concurrent;
 
 public class ConcurrentOutput {
 
-    public static void main(String[] args) {
+    private ConcurrentOutput() {
+    }
+
+    public static void main(final String[] args) {
 
         final Thread first = new Thread(
                 () -> System.out.println(Thread.currentThread().getName())
