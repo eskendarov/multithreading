@@ -1,5 +1,7 @@
 package ru.eskendarov.concurrent;
 
+import static java.lang.Thread.State.TERMINATED;
+
 public class ThreadState {
 
     private ThreadState() {
@@ -18,12 +20,12 @@ public class ThreadState {
 
         first.start();
         second.start();
-        try {
-            first.join();
-            second.join();
-        } catch (InterruptedException e) {
-            e.printStackTrace();
+
+        System.out.printf("First: %s, Second: %s\n", first.getState(), second.getState());
+        while (!(first.getState() == TERMINATED && second.getState() == TERMINATED)) {
+            System.out.printf("First: %s, Second: %s\n", first.getState(), second.getState());
         }
+        System.out.printf("First: %s, Second: %s\n", first.getState(), second.getState());
 
         System.out.println("Job completed!");
     }
