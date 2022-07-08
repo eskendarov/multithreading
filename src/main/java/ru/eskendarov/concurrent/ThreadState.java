@@ -4,9 +4,6 @@ import static java.lang.Thread.State.TERMINATED;
 
 public class ThreadState {
 
-    private ThreadState() {
-    }
-
     public static void main(final String[] args) {
 
         final Thread first = new Thread(
