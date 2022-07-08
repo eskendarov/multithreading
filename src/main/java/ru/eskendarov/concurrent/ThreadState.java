@@ -22,7 +22,7 @@ public class ThreadState {
         second.start();
 
         System.out.printf("First: %s, Second: %s\n", first.getState(), second.getState());
-        while (!(first.getState() == TERMINATED && second.getState() == TERMINATED)) {
+        while (first.getState() != TERMINATED || second.getState() != TERMINATED) {
             System.out.printf("First: %s, Second: %s\n", first.getState(), second.getState());
         }
         System.out.printf("First: %s, Second: %s\n", first.getState(), second.getState());
