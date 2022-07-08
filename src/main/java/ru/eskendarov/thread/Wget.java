@@ -8,7 +8,8 @@ public class Wget implements Runnable {
     private final String url;
     private final int speed;
 
-    public Wget(final String url, final int speed) {
+    public Wget(final String url,
+                final int speed) {
         this.url = url;
         this.speed = speed;
     }
