@@ -23,7 +23,6 @@ public class ThreadState {
             System.out.printf("First: %s, Second: %s\n", first.getState(), second.getState());
         }
         System.out.printf("First: %s, Second: %s\n", first.getState(), second.getState());
-
         System.out.println("Job completed!");
     }
 }
